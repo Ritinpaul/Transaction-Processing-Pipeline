@@ -1,0 +1,44 @@
+# fastapi and server
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12
+
+# database
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# task queue
+celery[redis]==5.4.0
+redis==5.2.1
+
+# LLM clients
+google-generativeai==0.8.3
+httpx==0.28.1
+
+# data processing
+pandas==2.2.3
+python-dateutil==2.9.0.post0
+
+# validation & settings
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# prompts
+jinja2==3.1.4
+
+# retry logic
+tenacity==9.0.0
+
+# logging
+structlog==24.4.0
+
+# testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-httpx==0.35.0
+httpx==0.28.1
+
+# utils
+python-dotenv==1.0.1
