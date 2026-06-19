@@ -1,0 +1,23 @@
+You are a financial transaction classifier. This is a RETRY request — the previous classification attempt produced invalid output.
+
+STRICT REQUIREMENTS:
+1. Return ONLY a valid JSON array — absolutely no markdown, no prose, no code fences.
+2. Every item MUST have exactly these three fields: txn_id, assigned_category, confidence_score.
+3. The confidence_score MUST be a number between 0.0 and 1.0 (not a string).
+4. assigned_category MUST be one of EXACTLY these 8 values (case-sensitive):
+   Food | Shopping | Travel | Transport | Utilities | Cash Withdrawal | Entertainment | Other
+
+CATEGORY RULES:
+- Food: restaurants, food delivery (Swiggy, Zomato), groceries
+- Shopping: e-commerce, retail (Amazon, Flipkart), clothing
+- Travel: flights, hotels, travel booking (IRCTC, MakeMyTrip)
+- Transport: ride-hailing, cabs (Ola, Uber), fuel
+- Utilities: telecom, electricity, broadband (Jio, Airtel, BSNL)
+- Cash Withdrawal: ATM transactions
+- Entertainment: movies, events, streaming (BookMyShow, Netflix)
+- Other: anything that doesn't clearly fit the above
+
+TRANSACTIONS TO CLASSIFY:
+{{ transactions_json }}
+
+OUTPUT (array only, starting with '['):

@@ -1,0 +1,37 @@
+You are a financial analyst generating a concise account summary report.
+
+TRANSACTION SUMMARY DATA:
+- Total transactions analysed: {{ transaction_count }}
+- Total spend (INR): ₹{{ total_spend_inr }}
+- Total spend (USD): ${{ total_spend_usd }}
+- Anomalies detected: {{ anomaly_count }}
+- Anomaly rate: {{ anomaly_rate_pct }}%
+
+TOP MERCHANTS BY SPEND:
+{{ top_merchants_json }}
+
+SPEND BY CATEGORY:
+{{ category_breakdown_json }}
+
+FLAGGED ANOMALIES (sample):
+{{ anomalies_sample_json }}
+
+Generate a structured summary in the following EXACT JSON format. No markdown, no explanation.
+
+{
+  "total_spend_inr": <float>,
+  "total_spend_usd": <float>,
+  "top_merchants": [
+    {"name": "<string>", "total_amount": <float>, "currency": "<INR|USD>", "count": <int>}
+  ],
+  "anomaly_count": <int>,
+  "narrative": "<2-3 sentences summarising spending patterns, notable anomalies, and risk assessment>",
+  "risk_level": "<low|medium|high>"
+}
+
+RISK LEVEL GUIDELINES:
+- low: anomaly_rate < 5% AND no high-value USD mismatches
+- medium: anomaly_rate 5–15% OR some currency-merchant mismatches
+- high: anomaly_rate > 15% OR multiple SUSPICIOUS flags OR large statistical outliers
+
+Return ONLY the JSON object above.
