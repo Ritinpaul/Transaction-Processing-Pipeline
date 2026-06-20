@@ -1,0 +1,6 @@
+txn_id,date,merchant,amount,currency,status,category,account_id,notes
+TXN001,2024-01-01,Amazon,150.00,INR,SUCCESS,Shopping,ACC001,
+TXN002,2024-01-02,Zomato,25.50,INR,SUCCESS,Food,ACC001,
+TXN003,2024-01-03,MakeMyTrip,2500.00,INR,SUCCESS,Travel,ACC002,
+TXN004,2024-01-04,Ola,15.00,INR,SUCCESS,Transport,ACC002,
+TXN005,2024-01-05,Jio,10.00,INR,SUCCESS,Utilities,ACC003,

@@ -1,0 +1,6 @@
+txn_id,date,merchant,amount,currency,status,category,account_id,notes
+TXN001,01-01-2024,Amazon,$150.00,inr,success,,ACC001,
+TXN002,2024/01/02,Zomato,25.50,USD,SUCCESS,Food,ACC001,
+TXN001,01-01-2024,Amazon,$150.00,inr,success,,ACC001,Duplicate row
+,2024-01-04,Ola,15.00,INR,FAILED,Transport,ACC002,Missing txn_id
+TXN005,2024-01-05,RandomMerchant,999999.00,INR,SUCCESS,Other,ACC003,SUSPICIOUS

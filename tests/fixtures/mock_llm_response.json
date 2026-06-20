@@ -1,0 +1,17 @@
+[
+  {
+    "txn_id": "TXN001",
+    "assigned_category": "Shopping",
+    "confidence_score": 0.95
+  },
+  {
+    "txn_id": "TXN002",
+    "assigned_category": "Food",
+    "confidence_score": 0.98
+  },
+  {
+    "txn_id": "ORPHAN_4",
+    "assigned_category": "Transport",
+    "confidence_score": 0.85
+  }
+]
